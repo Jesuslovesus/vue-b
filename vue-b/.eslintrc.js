@@ -20,7 +20,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     // always-multiline：多行模式必须带逗号，单行模式不能带逗号  
-    "comma-dangle": [2, "never"], 
+    "comma-dangle": ["error", "never"], 
     "no-empty": 2, 
     "no-multi-spaces": 2, 
     "no-mixed-spaces-and-tabs": [2,"smart-tabs"],
@@ -35,7 +35,7 @@ module.exports = {
     "key-spacing": [2,{"beforeColon": false, "afterColon": true}],
     "space-before-function-paren":[
       2,
-      {"anonymous": "naver","named": "never"}
+      {"anonymous": "never","named": "never"}
     ],
     "newline-after-var": 0,
     "no-inline-comments": 2,
