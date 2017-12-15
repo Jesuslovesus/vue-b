@@ -1,11 +1,11 @@
 <template>
   <div class="app-wrapper">
     <div>
-    
+      333
     </div>
     <!-- 内容 -->
     <div class="main-container">
-
+      33
     </div>
   </div>
 </template>
@@ -17,7 +17,6 @@ export default {
   components: {
     AppMain
   }
-
 }
 </script>
 

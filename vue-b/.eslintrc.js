@@ -1,10 +1,13 @@
 // https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
-  root: true,
+  // root: true,
   parser: 'babel-eslint',
-  parserOptions: {
-    sourceType: 'module'
+  // parserOptions: {
+  //   sourceType: 'module'
+  // },
+  globals: {
+    'JSEncrypt': true
   },
   env: {
     browser: true,
@@ -12,10 +15,10 @@ module.exports = {
     es6: true
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-  extends: 'standard',
+  extends: ["eslint:recommended"],
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html','vue'
   ],
   // add your custom rules here
   rules: {
