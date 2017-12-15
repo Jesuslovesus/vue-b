@@ -42,7 +42,7 @@ module.exports = {
     "no-multiple-empty-lines": [2, { "max": 2 }],
     "semi": [2, "never"], 
     "no-var": 0,
-    "no-redeclare": 1,  
+    "no-redeclare": 1  
     // allow async-await
     // 'generator-star-spacing': 'off',
     // allow debugger during development
