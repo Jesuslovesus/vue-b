@@ -7,9 +7,21 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/a',
+
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      hidden: true
+    },
+    {
+      path: '/',
+
+      name: 'Layout',
+      component: resolve => {
+        require(['../views/layout/layout'], resolve)
+      },
+      hidden: true
+      // children
     }
   ]
 })
