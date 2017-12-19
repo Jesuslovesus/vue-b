@@ -1,15 +1,14 @@
 <template>
   <div class="p-input-wrap">
-    <el-input v-if="passwordShow" v-model="passwordInput" :placeholder="placeholderValue">
+    <el-input v-if="passwordShow" type="text" v-model="passwordInput" :placeholder="placeholderValue">
     </el-input>
 
     <div class="p-hide" v-if="!passwordShow">
-      <el-input v-model="passwordInput">
-
+      <el-input v-model="passwordInput" type="password" :placeholder="placeholderValue">
       </el-input>
     </div>
     <!-- 显示隐藏 -->
-    <i :class="[{'click-see': passwordShow},'el-icon-view']" @click="passwordShow = !passwordShow" :placeholder="placeholderValue"></i>
+    <i :class="[{'click-see': passwordShow,'click-hide': !passwordShow},'el-icon-view icon-input']" @click="passwordShow = !passwordShow"></i>
   </div>
 
 </template>
@@ -20,7 +19,7 @@ export default {
   name: 'password-input',
   data() {
     return {
-      passwordShow: true,
+      passwordShow: false,
       passwordClean: false,
       passwordInput: '',
       placeholderValue: ''
@@ -47,7 +46,21 @@ export default {
 <style scoped lang="less">
 @import '../../../assets/style/color.less';
 @import '../../../assets/style/index.less';
-.click-see {
-  color: @blue-all;
+.p-input-wrap {
+  position: relative;
+  margin-bottom: 30px;
+  .icon-input {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    color: @infor;
+    cursor: pointer;
+  }
+  .click-see {
+    color: @blue-all;
+  }
+  .click-hide {
+    color: @infor;
+  }
 }
 </style>

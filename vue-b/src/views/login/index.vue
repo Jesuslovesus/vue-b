@@ -3,8 +3,11 @@
     <div class="con-wrap">
       <div class="con-box">
         <h2>登录</h2>
-        <el-input v-model="input" placeholder="账号"></el-input>
+        <account-input @accountChange="accountChange" :placeholder="accountPlaceholder"></account-input>
         <password-input @passwordChange="passwordChange" :placeholder="passwordPlaceholder"></password-input>
+        <p class="login-btn">
+          <el-button type="primary" @click="goLogin">登录</el-button>
+        </p>
       </div>
 
     </div>
@@ -12,22 +15,32 @@
 </template>
 
 <script>
-import { passwordInput } from './components.js'
+import { passwordInput, accountInput } from './components.js'
 export default {
   name: '',
   data() {
     return {
       passwordInput: '',
-      passwordPlaceholder: '输入密码'
+      passwordPlaceholder: '输入密码',
+      accountInput: '',
+      accountPlaceholder: '用户名'
     }
   },
   components: {
-    passwordInput
+    passwordInput,
+    accountInput
   },
   mounted() {},
   methods: {
     passwordChange(password) {
-      this.passwordChange = password
+      this.passwordInput = password
+    },
+    accountChange(account) {
+      this.accountInput = account
+    },
+    goLogin() {
+      // 验证登录
+      this.$router.push({ path: '/' })
     }
   }
 }
@@ -56,9 +69,15 @@ export default {
       top: 30%;
       left: 0;
       width: 100%;
-      background-color: aqua;
+      // background-color: aqua;
       h2 {
         text-align: center;
+      }
+      .login-btn {
+        width: 100%;
+        button {
+          width: 100%;
+        }
       }
     }
   }

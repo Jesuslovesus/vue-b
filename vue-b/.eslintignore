@@ -1,6 +1,7 @@
 build/
 config/
 dist/
+src/router
 node_modules/
 /*.js
 /test/unit/coverage/

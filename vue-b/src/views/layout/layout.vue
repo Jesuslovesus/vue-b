@@ -42,7 +42,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: @header-top;
+  padding-top: 0;
   .header-top {
     position: absolute;
     top: 0;
@@ -57,6 +57,14 @@ export default {
     top: 0;
     bottom: 0;
     background-color: @blue-dark;
+  }
+  .con-wrap {
+    position: absolute;
+    left: @left-nav-z;
+    top: @header-top;
+    right: 0;
+    bottom: 0;
+    background-color: @test;
   }
 }
 </style>

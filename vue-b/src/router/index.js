@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
       path: '/login',
+      meta: {
+        title: '登录'
+      },
       name: 'login',
       component: resolve => {
         require(['../views/login/index'], resolve)
@@ -15,10 +17,12 @@ export default new Router({
     },
     {
       path: '/',
-
+      meta: {
+        title: '首页'
+      },
       name: 'Layout',
       component: resolve => {
-        require(['../views/layout/layout'], resolve)
+        require(['../views/layout/layout.vue'], resolve)
       },
       hidden: true
       // children
