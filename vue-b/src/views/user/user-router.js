@@ -3,15 +3,18 @@ import Layout from '../layout/layout.vue'
 export default [
   {
     path: '/user',
-    meta: {
-      title: '用户'
-    },
     redirect: '/user/info',
     component: Layout,
+    // component: resolve => {
+    //   require(['./index'], resolve)
+    // }
     children: [
       {
-        path: 'info',
-        redirect: '/user/info',
+        path: '/user/info',
+        alias: '/user/info/message',
+        meta: {
+          title: '用户信息'
+        },
         component: resolve => {
           require(['./index'], resolve)
         },

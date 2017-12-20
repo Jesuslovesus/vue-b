@@ -4,7 +4,8 @@
 
 export const indexRouterMap = [
   {
-    path: '/login',
+    path: '/logins',
+    redirect: '/login',
     meta: {
       title: '登录'
     },
@@ -13,17 +14,5 @@ export const indexRouterMap = [
       require(['../views/login/index'], resolve)
     },
     hidden: true
-  },
-  {
-    path: '/',
-    meta: {
-      title: '首页'
-    },
-    name: 'Layout',
-    component: resolve => {
-      require(['../views/layout/layout.vue'], resolve)
-    },
-    hidden: true
-    // children
   }
 ]

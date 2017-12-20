@@ -10,7 +10,8 @@
     </nav>
 
     <article class="con-wrap">
-      <app-main></app-main>
+      <router-view></router-view>
+      <!-- <app-main></app-main> -->
     </article>
 
     <footer class="footer">

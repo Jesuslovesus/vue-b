@@ -1,7 +1,7 @@
 <template>
   <div class="user-wrap">
     <div class="user-content">
-      <router-view></router-view>
+      <!-- <router-view></router-view> -->
     </div>
   </div>
 </template>
