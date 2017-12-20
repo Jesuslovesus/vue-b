@@ -1,10 +1,10 @@
-import Layout from '../layout/layout.vue'
+import controlCenter from '../controlCenter/index.vue'
 
 export default [
   {
     path: '/user',
     redirect: '/user/info',
-    component: Layout,
+    component: controlCenter,
     // component: resolve => {
     //   require(['./index'], resolve)
     // }

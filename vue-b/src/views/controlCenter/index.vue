@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import { AppMain, HeaderTop } from './index'
+import { AppMain, HeaderTop } from './components'
 
 export default {
   name: 'layout',
@@ -35,7 +35,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 @import '../../assets/style/color.less';
-@import '../../assets/style/index.less';
+@import '../../assets/style/controlCenter.less';
 
 .app-wrapper {
   position: absolute;

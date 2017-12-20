@@ -1,12 +1,12 @@
 export default [
   {
-    path: '/',
+    path: '/controlCenter',
     meta: {
-      title: '首页'
+      title: '控制中心'
     },
     name: 'Layout',
     component: resolve => {
-      require(['./layout'], resolve)
+      require(['./index'], resolve)
     },
     hidden: true
     // children

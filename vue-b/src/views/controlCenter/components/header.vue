@@ -13,7 +13,7 @@
 </script>
 
 <style scoped lang="less">
-@import '../../assets/style/color.less';
+@import '../../../assets/style/color.less';
 .header-wrap {
   // position: absolute;
   // top: 0;

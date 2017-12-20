@@ -11,10 +11,10 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import VueRouter from 'vue-router'
 // js
-// 主路由，用于存放登录注册
+// 主路由，用于存放 首页、登录注册
 import { indexRouterMap } from './router/index-router'
-// 首页路由，用户、
-import layoutPageRouterMap from './views/layout/layout-router'
+// 控制中心路由，用户、
+import controlCenterPageRouterMap from './views/controlCenter/control-center-router'
 
 import userPageRouterMap from './views/user/user-router'
 
@@ -25,14 +25,15 @@ Vue.use(ElementUI)
 // 定义路由，多个模式，主路由是indexRouterMap，有分路由就后面继续.concat进来
 let routes = []
 
-routes = indexRouterMap.concat(layoutPageRouterMap).concat(userPageRouterMap)
+routes = indexRouterMap
+  .concat(controlCenterPageRouterMap)
+  .concat(userPageRouterMap)
 
 const router = new VueRouter({
   routes
 })
 
 router.beforeEach((to, from, next) => {
-  console.log(to)
   window.document.title = to.meta.title
   next()
 })
