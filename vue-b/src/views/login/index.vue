@@ -1,6 +1,12 @@
 <template>
   <div class="login-wrap">
+    <!-- 顶部导航 -->
+    <header class="header-top">
+      <header-top></header-top>
+    </header>
+    <!-- 登录 -->
     <div class="con-wrap">
+
       <div class="con-box">
         <h2>登录</h2>
         <account-input @accountChange="accountChange" :placeholder="accountPlaceholder"></account-input>
@@ -15,7 +21,7 @@
 </template>
 
 <script>
-import { passwordInput, accountInput } from './components.js'
+import { passwordInput, accountInput, headerTop } from './components.js'
 export default {
   name: '',
   data() {
@@ -28,7 +34,8 @@ export default {
   },
   components: {
     passwordInput,
-    accountInput
+    accountInput,
+    headerTop
   },
   mounted() {},
   methods: {
@@ -55,7 +62,10 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: @background-a;
+  background-color: @blue-dark;
+  .header-top {
+    height: @header-top-login;
+  }
   .con-wrap {
     position: absolute;
     top: 0;

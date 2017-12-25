@@ -2,20 +2,19 @@ import controlCenter from '../controlCenter/index.vue'
 
 export default [
   {
-    path: '/user',
-    redirect: '/user/info',
+    path: '/trader',
+    redirect: '/trader',
     component: controlCenter,
     children: [
       {
-        path: '/user/info',
-        alias: '/user/info/message',
+        path: '/trader',
         meta: {
-          title: '用户信息'
+          title: '交易员'
         },
         component: resolve => {
           require(['./index'], resolve)
         },
-        name: 'userCenter'
+        name: 'trader'
         // children:
       }
     ]

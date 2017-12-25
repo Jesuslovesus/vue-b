@@ -25,5 +25,23 @@ export const indexRouterMap = [
       require(['../views/index/index'], resolve)
     },
     hidden: true
+  },
+  // {
+  //   path: '/traders',
+  //   // alias: '/index',
+  //   meta: {
+  //     title: '交易员'
+  //   },
+  //   name: 'index',
+  //   component: resolve => {
+  //     require(['../views/traders/index'], resolve)
+  //   },
+  //   hidden: true
+  // },
+  {
+    path: '*',
+    redirect: '404',
+    name: 'not_found',
+    hidden: true
   }
 ]
