@@ -1,5 +1,7 @@
 <template>
-  <div class="app-wrapper">
+  <div :class="[{'close-left-nav': closeLeftNav, 'close-top-nav': closeTopNav},'app-wrapper']">
+    <!--  -->
+
     <!-- 三个布局，上，左，内容 -->
     <header class="header-top">
       <header-top></header-top>
@@ -25,6 +27,12 @@ import { AppMain, HeaderTop } from './components'
 
 export default {
   name: 'layout',
+  data() {
+    return {
+      closeLeftNav: false,
+      closeTopNav: false
+    }
+  },
   components: {
     AppMain,
     HeaderTop
@@ -66,6 +74,17 @@ export default {
     right: 0;
     bottom: 0;
     background-color: @test;
+    transform: all 0.5;
+  }
+}
+.close-left-nav {
+  .con-wrap {
+    // left: 0px;
+  }
+}
+.close-top-nav {
+  .con-wrap {
+    // top: 0px;
   }
 }
 </style>

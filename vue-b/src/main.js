@@ -5,10 +5,10 @@ require('!style-loader!css-loader!less-loader!./assets/style/index.less')
 
 import Vue from 'vue'
 import App from './App'
+
 // import router from './router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-
 import VueRouter from 'vue-router'
 // js
 // 主路由，用于存放 首页、登录注册
