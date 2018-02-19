@@ -75,6 +75,7 @@ export default {
     bottom: 0;
     background-color: @test;
     transform: all 0.5;
+    overflow: hidden;
   }
 }
 .close-left-nav {

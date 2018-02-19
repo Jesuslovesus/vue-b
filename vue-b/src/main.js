@@ -18,6 +18,8 @@ import controlCenterPageRouterMap from './views/controlCenter/control-center-rou
 import userPageRouterMap from './views/user/user-router'
 // 交易员
 import traderPageRouterMap from './views/traders/traders-router'
+// demo页面文件夹
+import demoPageRouterMap from './views/demo-page/demo-router'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false
@@ -30,6 +32,7 @@ routes = indexRouterMap
   .concat(controlCenterPageRouterMap)
   .concat(userPageRouterMap)
   .concat(traderPageRouterMap)
+  .concat(demoPageRouterMap)
 
 const router = new VueRouter({
   routes
